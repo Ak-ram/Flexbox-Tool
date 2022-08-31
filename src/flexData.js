@@ -4,13 +4,15 @@ export const flexData = {
         { "flex-wrap": ['wrap', 'wrap-reverse', 'nowrap'] },
         { "align-items": ['center', 'flex-start', 'flex-end', 'stretch'] },
         { 'align-content': ['center', 'flex-start', 'flex-end', 'space-around', 'space-evenly', 'space-between'] },
-        { "justify-content": ['center', 'flex-start', 'flex-end', 'space-around', 'space-evenly', 'space-between'], }
+        { "justify-content": ['center', 'flex-start', 'flex-end', 'space-around', 'space-evenly', 'space-between'], },
+        { "row-gap": ['2rem','1rem',0], },
+        { "column-gap": ['2rem','1rem',0], }
     ],
     item: [
-        { "flex-grow": [0] },
-        { "flex-shrink": [0] },
-        { "flex-basis": [0, 'auto', 'content'] },
+        { "flex-grow": [0,1,2,3,4,5].reverse() },
+        { "flex-shrink": [0,1,3,5,10,30].reverse() },
+        { "flex-basis": ['auto', 'content',0,'1rem','3rem','5rem','10rem'].reverse() },
         { "align-self": ['center', 'flex-start', 'flex-end'] },
-        { "order": [0] }
+        { "order": [0,1,2,3,4,5].reverse() }
     ]
 }

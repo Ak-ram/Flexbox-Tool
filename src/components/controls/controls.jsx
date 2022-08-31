@@ -12,19 +12,21 @@ const Controls = () => {
                         return (<Select
                             key={Object.keys(prop)}
                             name={Object.keys(prop)}
-                            options={Object.values(prop)[0]} />)
+                            prop={prop} />
+                                
+                         )
                     }
                     )}
             </div>
             <br />
-            <span className='controls-header'>Item Options :</span>
+            <span className='controls-header'>Item No. 3 :</span>
             <div className='item-options'>
                 {
                     flexData.item.map((prop) => {
                         return (<Select
                             key={Object.keys(prop)}
                             name={Object.keys(prop)}
-                            options={Object.values(prop)[0]} />)
+                            prop={prop} />)
                     }
                     )}
 
