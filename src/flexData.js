@@ -4,7 +4,9 @@ export const flexData = {
         { "flex-wrap": ['wrap', 'wrap-reverse', 'nowrap'] },
         { "align-items": ['center', 'flex-start', 'flex-end', 'stretch'] },
         { 'align-content': ['center', 'flex-start', 'flex-end', 'space-around', 'space-evenly', 'space-between'] },
-        { "justify-content": ['center', 'flex-start', 'flex-end', 'space-around', 'space-evenly', 'space-between'], }
+        { "justify-content": ['center', 'flex-start', 'flex-end', 'space-around', 'space-evenly', 'space-between'], },
+        { "row-gap": ['2rem','1rem',0], },
+        { "column-gap": ['2rem','1rem',0], }
     ],
     item: [
         { "flex-grow": [0] },
