@@ -16,7 +16,6 @@ const Select = ({ name, prop }) => {
             optionElement[i].classList.add('hide')
         setClicked(!isClicked);
     }
-
     return (
         <div className='select'>
             <div className='name'>{name} :</div>
