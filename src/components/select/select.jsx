@@ -1,20 +1,21 @@
-import { useRef } from 'react';
-import { useState } from 'react';
-import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
-
+import { useEffect, useState } from 'react';
+import Option from '../option/option'
 import './select.sass'
-const Select = ({ name, options }) => {
+const Select = ({ name, prop }) => {
     const [isClicked, setClicked] = useState(false);
-    const optionRef = useRef();
+    const [options,setOptions] = useState([])
+    try{
+        useEffect(()=>{
+            setOptions(prop[Object.keys(prop)[0]])
+        },[])
+    }catch{
+    }
     const ChangeOptionsListStatus = (ele) => {
         let optionElement = document.querySelectorAll('.secondary-options');
         for (let i = 0; i < optionElement.length; i++)
             optionElement[i].classList.add('hide')
         setClicked(!isClicked);
-        console.log(optionRef.current)
-        // return ele.target.textContent
     }
-
 
     return (
         <div className='select'>
@@ -24,10 +25,7 @@ const Select = ({ name, options }) => {
                 <div className={`${isClicked ? 'secondary-options' : 'secondary-options hide'}`}>
                     {options?.map((option) => {
                         return (
-                            <div key={option} className="option" onClick={ChangeOptionsListStatus}>
-                                <MdOutlineKeyboardArrowRight color={'#bbb'} size={22} />
-                                <span ref={optionRef} className='_option'>{option}</span>
-                            </div>
+                           <Option key={option} option={option} prop={prop} />
                         )
                     })}
                 </div>

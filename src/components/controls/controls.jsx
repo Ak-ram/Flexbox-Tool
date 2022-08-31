@@ -12,7 +12,9 @@ const Controls = () => {
                         return (<Select
                             key={Object.keys(prop)}
                             name={Object.keys(prop)}
-                            options={Object.values(prop)[0]} />)
+                            prop={prop} />
+                                
+                         )
                     }
                     )}
             </div>
@@ -24,7 +26,7 @@ const Controls = () => {
                         return (<Select
                             key={Object.keys(prop)}
                             name={Object.keys(prop)}
-                            options={Object.values(prop)[0]} />)
+                            prop={prop} />)
                     }
                     )}
 
