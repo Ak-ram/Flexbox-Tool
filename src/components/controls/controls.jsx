@@ -1,22 +1,34 @@
 import Select from '../select/select';
 import './controls.sass';
+import { flexData } from '../../flexData';
 const Controls = () => {
-    const flexDirections = ['row', 'column', 'row-reverse', 'column-reverse']
+
     return (
         <section className="controls">
+            <span  className='controls-header'>Container Options :</span>
+            <div className='container-options'>
+                {
+                    flexData.container.map((prop) => {
+                        return (<Select
+                            key={Object.keys(prop)}
+                            name={Object.keys(prop)}
+                            options={Object.values(prop)[0]} />)
+                    }
+                    )}
+            </div>
+            <br />
+            <span className='controls-header'>Item Options :</span>
+            <div className='item-options'>
+                {
+                    flexData.item.map((prop) => {
+                        return (<Select
+                            key={Object.keys(prop)}
+                            name={Object.keys(prop)}
+                            options={Object.values(prop)[0]} />)
+                    }
+                    )}
 
-            <Select name="flex-direction" options={flexDirections} />
-            <Select name="flex-direction" options={flexDirections} />
-            <Select name="flex-direction" options={flexDirections} />
-            <Select name="flex-direction" options={flexDirections} />
-            <Select name="flex-direction" options={flexDirections} />
-            <Select name="flex-direction" options={flexDirections} />
-            <Select name="flex-direction" options={flexDirections} />
-            <Select name="flex-direction" options={flexDirections} />
-            <Select name="flex-direction" options={flexDirections} />
-            <Select name="flex-direction" options={flexDirections} />
-
-        </section>
+            </div>        </section>
     )
 }
 

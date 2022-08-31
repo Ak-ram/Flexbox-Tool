@@ -3,10 +3,11 @@
     align-items: flex-start
     justify-content: center
     background: #444444
-    border-radius: .2rem
+    border-radius: 0.2rem
     padding: 1rem
-    gap: 1rem
+    gap: .5rem
     position: relative
+    width: 180px
     .name
         color: #fff
     .options
@@ -18,11 +19,12 @@
         cursor: pointer
         .default-option
             min-width: 100%
-            color: #fff
+            color: #cddc39
+            font-weight: bold
         .secondary-options
             position: absolute
-            width: max-content
-            bottom: 100%
+            width: 100%
+            bottom: 110%
             left: 50%
             transform: translate(-50%, -0%)
             display: flex
@@ -33,7 +35,7 @@
             overflow: clip // to prevent text overlapping
             .option
                 display: flex
-                padding: .5rem 1rem
+                padding: 0.5rem 0rem 0.5rem .3rem
                 align-items: center
                 column-gap: 0.5rem
                 &:hover

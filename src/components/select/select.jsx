@@ -1,15 +1,18 @@
 import { useRef } from 'react';
 import { useState } from 'react';
-import { MdOutlineCheckCircleOutline } from 'react-icons/md';
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 
 import './select.sass'
 const Select = ({ name, options }) => {
     const [isClicked, setClicked] = useState(false);
-    const ChangeOptionsListStatus = () => {
-        let options = document.querySelectorAll('.secondary-options');
-        for (let i = 0; i < options.length; i++)
-            options[i].classList.add('hide')
+    const optionRef = useRef();
+    const ChangeOptionsListStatus = (ele) => {
+        let optionElement = document.querySelectorAll('.secondary-options');
+        for (let i = 0; i < optionElement.length; i++)
+            optionElement[i].classList.add('hide')
         setClicked(!isClicked);
+        console.log(optionRef.current)
+        // return ele.target.textContent
     }
 
 
@@ -17,14 +20,14 @@ const Select = ({ name, options }) => {
         <div className='select'>
             <div className='name'>{name} :</div>
             <div className='options'>
-                <div className='default-option' onClick={ChangeOptionsListStatus}>row</div>
+                <div className='default-option' onClick={(ele)=>ChangeOptionsListStatus(ele)}>row</div>
                 <div className={`${isClicked ? 'secondary-options' : 'secondary-options hide'}`}>
-                    {options?.map((option,index) => {
-                        return(
+                    {options?.map((option) => {
+                        return (
                             <div key={option} className="option" onClick={ChangeOptionsListStatus}>
-                            {<MdOutlineCheckCircleOutline color={'#bbb'} size={22} />}
-                            <span className='_option'>{option}</span>
-                        </div>
+                                <MdOutlineKeyboardArrowRight color={'#bbb'} size={22} />
+                                <span ref={optionRef} className='_option'>{option}</span>
+                            </div>
                         )
                     })}
                 </div>
