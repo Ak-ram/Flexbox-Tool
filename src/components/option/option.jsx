@@ -4,9 +4,15 @@ const Option = ({option,prop}) =>{
     const getOptionValue = ()=>{
         let screen = document.querySelectorAll('.screen')[0];
         let property = Object.keys(prop);
-        screen.style[property] = option;
-        // console.log(flexData.container.find(prop=> prop==property))
-        console.log(...property)
+    
+        flexData.container.find(key=> {
+            // component options
+            if(property[0]===Object.keys(key)[0]){
+                screen.style[property] = option;
+            }else{
+                // item options
+            }
+        })
     }
     return(
          <div key={option} className="option" onClick={getOptionValue}>
