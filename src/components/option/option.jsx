@@ -9,13 +9,15 @@ const Option = ({option,prop}) =>{
             // component options
             if(property[0]===Object.keys(key)[0]){
                 screen.style[property] = option;
+                box_3.classList.remove('box_active');
             }else{
                 // item options
                 flexData.item.find(key=>{
                     if(property[0]=== Object.keys(key)[0]){
                         box_3.style[property] = option;
-                        console.log(box_3)
-                    }
+                        box_3.classList.add('box_active')
+                    };
+                    
                 })
             }
             e.currentTarget.parentElement.previousElementSibling.textContent = option

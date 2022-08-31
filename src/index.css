@@ -8,6 +8,7 @@ body {
 }
 *,::before,::after{
   box-sizing: border-box;
+  transition: all .3s;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

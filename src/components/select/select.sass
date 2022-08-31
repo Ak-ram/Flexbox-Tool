@@ -32,12 +32,14 @@
             height: 130px
             bottom: 110%
             left: 50%
-            transform: translate(-50%, -0%)
+            transform: translate(-50%, 0%)
             display: flex
-            background: #f9f9f9
+            background: #1e1e1e
             flex-direction: column
-            transition: all .3s
+            transition: all 0.3s
             overflow-y: auto
+            color: #fff
+            box-shadow: 0 0 0.2rem #0000008f
             
             .option
                 display: flex
@@ -45,9 +47,8 @@
                 align-items: center
                 column-gap: 0.5rem
                 &:hover
-                    background: #e91e63
+                    background: #363636
                     color: #fff
-                    box-shadow: 0 0 0.5rem #565656
                 .checkbox
                     background: red
                     border-radius: 100%
