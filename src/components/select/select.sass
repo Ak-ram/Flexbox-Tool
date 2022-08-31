@@ -27,15 +27,19 @@
             transform: translate(-50%, -0%)
             display: flex
             background: #f9f9f9
-            padding: 0.6rem
             flex-direction: column
             border-radius: 0.2rem
-            height: 100px
             transition: all .3s
             overflow: clip // to prevent text overlapping
             .option
                 display: flex
-                gap: .4rem
+                padding: .5rem 1rem
+                align-items: center
+                column-gap: 0.5rem
+                &:hover
+                    background: #e91e63
+                    color: #fff
+                    box-shadow: 0 0 0.5rem #565656
                 .checkbox
                     background: red
                     border-radius: 100%
