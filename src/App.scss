@@ -2,6 +2,19 @@
   display: flex;
   flex-direction: column;
   background: #1e1e1e;
-  height: 100vh;
-  width: 100vw;
+  padding: 2rem;
+  // background: url("https://img.freepik.com/free-vector/planets-outer-space-with-satellites-meteors-illustration_33099-2352.jpg?size=626&ext=jpg&uid=R34442073&ga=GA1.2.1132456566.1659668491");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: space-around;
+  gap: 8rem;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+.hide{
+  height: 0 !important;
+  overflow: hidden !important;
+  padding: 0 .6rem !important;
+  transition: height .3s !important;
 }

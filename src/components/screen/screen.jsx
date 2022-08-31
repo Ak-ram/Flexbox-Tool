@@ -1,11 +1,11 @@
 import Box from '../box/box';
 import './screen.sass';
 const Screen = ()=>{
-    const colors = ["#000","#f0f","#fdd","#00f","#f2f","#ccc"]
+    const colors = ["#ff9800","#e91e63","#673ab7","#03a9f4","#f2f","#ccc"]
     return(
         <section className="screen">
             {
-                colors.map((color,index)=> <Box color={color} index={index}/>)
+                colors.map((color,index)=> <Box key={color} color={color} index={index+1}/>)
             }
         </section>
     )

@@ -1,0 +1,43 @@
+.select
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    background: #444444
+    border-radius: .2rem
+    padding: 1rem
+    gap: 1rem
+    position: relative
+    .name
+        color: #fff
+    .options
+        gap: 1rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        .default-option
+            min-width: 100%
+            color: #fff
+        .secondary-options
+            position: absolute
+            width: max-content
+            bottom: 100%
+            left: 50%
+            transform: translate(-50%, -0%)
+            display: flex
+            background: #f9f9f9
+            padding: 0.6rem
+            flex-direction: column
+            border-radius: 0.2rem
+            height: 100px
+            transition: all .3s
+            overflow: clip // to prevent text overlapping
+            .option
+                display: flex
+                gap: .4rem
+                .checkbox
+                    background: red
+                    border-radius: 100%
+                    width: 20px
+                    height: 20px
