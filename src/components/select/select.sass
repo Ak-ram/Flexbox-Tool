@@ -8,6 +8,9 @@
     gap: .5rem
     position: relative
     width: 17rem
+    transition: background .3s
+    &:hover
+        background: #323232
     .name
         color: #fff
     .options
@@ -17,6 +20,7 @@
         align-items: center
         justify-content: center
         cursor: pointer
+        flex-grow: 1
         .default-option
             min-width: 100%
             color: #cddc39
