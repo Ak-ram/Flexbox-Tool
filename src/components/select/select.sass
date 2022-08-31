@@ -23,16 +23,18 @@
             font-weight: bold
         .secondary-options
             position: absolute
+            z-index: 3
             width: 100%
+            height: 130px
             bottom: 110%
             left: 50%
             transform: translate(-50%, -0%)
             display: flex
             background: #f9f9f9
             flex-direction: column
-            border-radius: 0.2rem
             transition: all .3s
-            overflow: clip // to prevent text overlapping
+            overflow-y: auto
+            
             .option
                 display: flex
                 padding: 0.5rem 0rem 0.5rem .3rem

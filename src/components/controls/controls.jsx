@@ -19,7 +19,7 @@ const Controls = () => {
                     )}
             </div>
             <br />
-            <span className='controls-header'>Item Options :</span>
+            <span className='controls-header'>Item No. 3 :</span>
             <div className='item-options'>
                 {
                     flexData.item.map((prop) => {
