@@ -21,7 +21,7 @@ const Select = ({ name, prop }) => {
         <div className='select'>
             <div className='name'>{name} :</div>
             <div className='options'>
-                <div className='default-option' onClick={(ele)=>ChangeOptionsListStatus(ele)}>row</div>
+                <div className='default-option' onClick={(ele)=>ChangeOptionsListStatus(ele)}>choose</div>
                 <div className={`${isClicked ? 'secondary-options' : 'secondary-options hide'}`}>
                     {options?.map((option) => {
                         return (
