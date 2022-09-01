@@ -1,19 +1,19 @@
 .select
     display: flex
-    align-items: flex-start
-    // justify-content: center
+    align-items: center
     background: #444444
     border-radius: 0.2rem
-    padding: 1rem
+    padding: .5rem
     gap: .5rem
-    position: relative
-    width: 17rem
+    width: 18rem
     transition: background .3s
     &:hover
         background: #323232
     .name
         color: #fff
+        font-weight: bold
     .options
+        position: relative
         gap: 1rem
         display: flex
         flex-direction: column
@@ -23,13 +23,19 @@
         flex-grow: 1
         .default-option
             min-width: 100%
-            color: #cddc39
-            font-weight: bold
+            color: #aaa
+            display: flex
+            align-items: flex-end
+            border: 1px solid
+            border-radius: 3px
+            padding: .5rem
+            justify-content: space-between
         .secondary-options
             position: absolute
             z-index: 3
             width: 100%
-            height: 130px
+            height: 115px
+            max-height: 130px
             bottom: 110%
             left: 50%
             transform: translate(-50%, 0%)
