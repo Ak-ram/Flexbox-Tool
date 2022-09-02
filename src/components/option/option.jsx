@@ -17,7 +17,6 @@ const Option = ({option,prop}) =>{
                         box_3.style[property] = option;
                         box_3.classList.add('box_active')
                     };
-                    
                 })
             }
             // e.currentTarget.parentElement.previousElementSibling.firstChild.textContent = option
