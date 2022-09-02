@@ -23,7 +23,7 @@ const Select = ({ name, prop }) => {
             <div className='name'>{name}</div>
             <div className='options'>
                 <div className='default-option' onClick={(ele)=>ChangeOptionsListStatus(ele)}>
-                    Choose {isOpened?<IoIosArrowDown />:<IoIosArrowUp />}
+                    <div className="choose">Choose</div> {isOpened?<IoIosArrowDown />:<IoIosArrowUp />}
                     {/* select */}
                     </div>
                 <div className={`${isClicked ? 'secondary-options' : 'secondary-options hide'}`}>
