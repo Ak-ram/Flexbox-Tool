@@ -20,7 +20,8 @@ const Option = ({option,prop}) =>{
                     
                 })
             }
-            e.currentTarget.parentElement.previousElementSibling.textContent = option
+            // e.currentTarget.parentElement.previousElementSibling.firstChild.textContent = option
+            e.currentTarget.parentElement.parentElement.querySelector('.choose').textContent = option
         })
     }
     return(
