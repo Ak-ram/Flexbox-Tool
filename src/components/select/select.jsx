@@ -25,7 +25,7 @@ const Select = ({ name, prop }) => {
                 <div className='default-option' onClick={(ele)=>ChangeOptionsListStatus(ele)}>
                     Choose {isOpened?<IoIosArrowDown />:<IoIosArrowUp />}
                     </div>
-                <div className={`${isClicked ? 'secondary-options' : 'secondary-options hide'}`}>
+                <div className={`${isOpened ? 'secondary-options' : 'secondary-options hide'}`}>
                     {options?.map((option) => {
                         return (
                            <Option key={option} option={option} prop={prop} />
